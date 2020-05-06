@@ -39,7 +39,10 @@
             <label for="jk" class="col-sm-2 col-form-table my-2">Jenis Kelamin</label>
             <div class="my-2">:</div>
             <div class="col-sm-5">
-	            <input type="text" class="form-control" id="jk" name="jk" required>
+	            <select class="form-control col-sm-4" id="jk" name="jk" required>
+                <option value="L">Laki-Laki</option>
+                <option value="P">Perempuan</option>
+            </select>
 	        </div>
         </div>
 
