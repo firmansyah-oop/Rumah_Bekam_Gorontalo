@@ -44,9 +44,11 @@
                 <td><?= $pasien['no_hp']; ?></td>
                 <td><?= $pasien['pekerjaan']; ?></td>
                 <td><?= $pasien['alamat']; ?></td>
-                <td onclick="return confirm('Yakin akan dihapus?');"><?php echo anchor('pasien/hapus/'. $pasien['id_pasien'], ' <div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div> ');?>  
-                </td>
-                <td><?php echo anchor('pasien/ubahData/'. $pasien['id_pasien'],'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div></td>');?>
+                <td>
+                    <b title="Hapus" onclick="return confirm('Yakin akan dihapus?');"><?php echo anchor('pasien/hapus/'. $pasien['id_pasien'], ' <div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div> ');?>  
+                    </b>
+                    <b title="Edit"> <?php echo anchor('pasien/ubahData/'. $pasien['id_pasien'],'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div></td>');?>
+                    </b>
                 </td>
             </tr>
         <?php $i++;
