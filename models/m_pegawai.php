@@ -18,4 +18,22 @@ class M_pegawai extends CI_Model
 
 		$this->db->insert('tb_pegawai', $data);
 	}
+	
+	public function hapusData($where, $table)
+	{
+		$this->db->where($where);
+		$this->db->delete($table);
+	}
+
+	public function ubahData($where,$table)
+	{
+		return $this->db->get_where($table,$where);
+	}
+
+	public function prosesUbahData($where, $data, $table)
+	{
+		$this->db->where($where);
+
+		$this->db->update($table, $data);
+	}
 }
