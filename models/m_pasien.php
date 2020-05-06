@@ -25,14 +25,19 @@ class M_pasien extends CI_model
 		$this->db->insert('tb_pasien', $data);
 	}
 
-	public function hapusData()
+	public function hapusData($where, $table)
 	{
-
+		$this->db->where($where);
+		$this->db->delete($table);
 	}
 
-	public function ubahData($where)
+	public function ubahData($where,$table)
 	{
-		return $this->db->get_where('tb_pasien',$where);
-
+		return $this->db->get_where($table,$where);
+	}
+	public function prosesUbahData($where, $data, $table)
+	{
+		$this->db->where($where);
+		$this->db->update($table, $data);
 	}
 }
